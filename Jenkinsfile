@@ -15,6 +15,10 @@ pipeline {
       }
       steps {
         echo 'Ask?'
+        withAnt(installation: '1.9.9', jdk: '1.8') {
+          withAnt()
+        }
+
       }
     }
   }
